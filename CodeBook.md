@@ -1,4 +1,4 @@
-# Data Dictionary / CodeBook for courseProjectTidyDataset.csv
+# Data Dictionary / CodeBook for courseProjectTidyDataset.txt
 
 Note: See associated README.md for additional information on the data processing that took the original dataset and
 produced two intermediate Tidy datasets, and ultimately exported this dataset.
@@ -8,7 +8,7 @@ Note: This dataset contains both Test data and Training Data from the Original D
 Note: All detailed original variable descriptions are at bottom of this CodeBook under "Documentation from Original Dataset"
 
 ## ====================================================
-## File courseProjectTidyDataset.csv Dataset Dictionary
+## File courseProjectTidyDataset.txt Dataset Dictionary
 ## ====================================================
 
 ```

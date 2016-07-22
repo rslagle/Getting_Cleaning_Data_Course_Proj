@@ -21,7 +21,7 @@ The Github Repo contains:
 
 	3) This README.md file
 
-The second Tidy Dataset of "Means" was exported from R as a csv file (courseProjectTidyDataset.csv), which has been uploaded to the Coursera Web site as part of the course project requirements.  The project requirements did not specify the file format for the exported results, so the csv format was used since it is much easier for the end user to view outside of R.
+The second Tidy Dataset of "Means" was exported from R as a comma delimited txt file (courseProjectTidyDataset.txt), which has been uploaded to the Coursera Web site as part of the course project requirements.  The project requirements did not specify the exact file format for the exported results, so a comma delimited txt file was used (i.e., the same format as a csv file) was used since it is much easier for the end user to view outside of R.
 
 =============================================
 Note: The use of this dataset in publications must be acknowledged by referencing the following publication [1] 
@@ -73,7 +73,7 @@ Note: Requirement 3 calls applying descriptive activity names to the activity da
 
 Note: Requirement 4 calls applying descriptive variable names to the data.  For the YData and SubjectData I simply assigned names manually.  For the XData, I achieved this by modifying the Feature data, translating abbreviations to full text and adding underscores for readability.  XData names also had the special charaters "(", ")", and "-" removed for better compatibility with the R Code as well as other database and statistical applications (e.g., Oracle, MySQL, SAS, etc.).  These translations are documented in the CodeBook.md accompanying this README.md
 
-Note: Requirement 5 calls for the creation of a second Tidy dataset of means processed from the first Tidy dataset by the cross combination of activityNames and subjectId.  This requirement is meet by Grouping and Aggregating the first Tidy dataset with Group By activityNames and subjectId.  These data sets are what is being referred to as "wide" datasets, in that they have on row for each activityName, subjectId combination and 66 measurement columns.  These datasets are both Tidy because they have one column for each data factor and measurement value, and one row for each observation or agragated onservation.
+Note: Requirement 5 calls for the creation of a second Tidy dataset of means processed from the first Tidy dataset by the cross combination of activityNames and subjectId.  This requirement is meet by Grouping and Aggregating the first Tidy dataset with Group By activityNames and subjectId.  These data sets are what is being referred to as "wide" datasets, in that they have on row for each activityName, subjectId combination and 66 measurement columns.  These datasets are both Tidy because they have one column for each data factor and measurement value, and one row for each observation or aggragated observation set.  And, all of the information is of one kind of data, and it is contained within one table.
 
 ==============
 R Code Listing
@@ -99,7 +99,7 @@ library(tidyr)
 # They are commented out since they are only run once, but are included here for reference.
 #fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 #fileDest <- paste(dataInputDir, "A1_data.zip", sep="")
-#download.file(A1fileURL, destfile=fileData, mode="wb")
+#download.file(fileURL, destfile=fileData, mode="wb")
 #
 # The resulting downloaded local Zip file was manually process to extract the data files.
 # Since the local machine being used was Windows 10, several files needed to be processed
@@ -242,16 +242,19 @@ names(subsetMeans)[2] <- "subjectId"
 outputFile <- paste(dataOutputDir, "courseProjectCodeBook.csv", sep="")
 write.table(featuresData[featuresData$newName %in% XSubsetNames,], sep=",", row.names = FALSE, file=outputFile)
 #
-# Write out subsetMeans data as a CSV file
-outputFile <- paste(dataOutputDir, "courseProjectTidyDataset.csv", sep="")
+# Write out subsetMeans data as a comma delimited txt file
+# This is the Project Tidy Data Deliverable
+outputFile <- paste(dataOutputDir, "courseProjectTidyDataset.txt", sep="")
 write.table(subsetMeans, sep=",", row.names = FALSE, file=outputFile)
 #
 #
 # Notes for reading in data file from David Hood at:
 #   https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/ 
 # filePath <- "insert local directory of file location"
-# fileName <- subsetMeans.csv
+# fileName <- "courseProjectTidyDataset.txt"
 #data <- read.csv(paste(filePath, fileName, sep=""), header = TRUE)
+# or
+#data <- read.table(paste(filePath, fileName, sep=""), sep=",", header = TRUE)
 #View(data)
 ```
 

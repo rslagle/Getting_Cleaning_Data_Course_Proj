@@ -17,8 +17,8 @@ library(tidyr)
 # These commands were used to download the Zip file from it's source
 # They are commented out since they are only run once, but are included here for reference.
 #fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-#fileDest <- paste(dataInputDir, "A1_data.zip", sep="")
-#download.file(A1fileURL, destfile=fileData, mode="wb")
+#fileDest <- paste(dataInputDir, "data.zip", sep="")
+#download.file(fileURL, destfile=fileDest, mode="wb")
 #
 # The resulting downloaded local Zip file was manually process to extract the data files.
 # Since the local machine being used was Windows 10, several files needed to be processed
@@ -162,14 +162,18 @@ outputFile <- paste(dataOutputDir, "courseProjectCodeBook.csv", sep="")
 write.table(featuresData[featuresData$newName %in% XSubsetNames,], sep=",", row.names = FALSE, file=outputFile)
 
 #
-# Write out subsetMeans data as a CSV file
-outputFile <- paste(dataOutputDir, "courseProjectTidyDataset.csv", sep="")
+# Write out subsetMeans data as a comma delimited txt file
+# This is the Project Tidy Data Deliverable
+outputFile <- paste(dataOutputDir, "courseProjectTidyDataset.txt", sep="")
 write.table(subsetMeans, sep=",", row.names = FALSE, file=outputFile)
 #
 #
 # Notes for reading in data file from David Hood at:
 #   https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/ 
 # filePath <- "insert local directory of file location"
-# fileName <- subsetMeans.csv
+# fileName <- "courseProjectTidyDataset.txt"
 #data <- read.csv(paste(filePath, fileName, sep=""), header = TRUE)
+# or
+#data <- read.table(paste(filePath, fileName, sep=""), sep=",", header = TRUE)
 #View(data)
+
