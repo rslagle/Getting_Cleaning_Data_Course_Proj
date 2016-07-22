@@ -55,7 +55,7 @@ Steps
 * 17) Inserts Descriptive Activity Data. Course Project Specification # 3
 * 18) Subsets data to just required Variables (means and stds). Course Project Specification # 2
 * 19) Create a second Tidy dataset of Means by activityName and subjectId. Course Project Specification # 5
-* 20) Exports the second Tidy dataset as a csv to be uploaded to Coursera
+* 20) Exports the second Tidy dataset as a txt/csv to be uploaded to Coursera
 
 ## End R Program Code Summary
 ## ==========================
