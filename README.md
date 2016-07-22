@@ -12,6 +12,7 @@ Additional source data information is available at:
 	http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
 The Github Repo contains:
+
 	1) An R program script (run_analysis.R) to read the raw data and process the data into the Tidy dataset, and then 
 	further process that Tidy dataset into a second Tidy dataset of mean values for each Activity and Subject
 	combination.
@@ -25,7 +26,7 @@ The second Tidy Dataset of "Means" was exported from R as a csv file (courseProj
 =============================================
 Note: The use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 
-[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+ [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 ==============================================
 
 ## ======================
@@ -33,26 +34,26 @@ Note: The use of this dataset in publications must be acknowledged by referencin
 ## ======================
 
 Steps
-1) Example code to set the Directory Location of the File Download and File Input for reading data.
-2) Example code to set the Directory Location of the exporting data Output.
-3) Example code for downloading the data from the URL.
-4) Note: Steps 1-3 are example only because they require local user directory information
-5) Note: Downloaded files were modified to convert Unix(Lf) to Dos(Cr/Lf)
-6) Read Activity_Label File
-7) Read Features File
-8) Read Test Files
-9) Read Train Files
-10) Rename activityData Columns to "activityId" and "activityName"
-11) Process featureData for use as XData Column Names. Modifies the original Feature names to better textual descriptions.
-12) Renames Test Data Columns from V1, V2, etc. to Descriptive Names. Course Project Specification # 4 - 1 of 2 
-13) Clips together Test Data files
-14) Renames Train Data Columns from V1, V2, etc. to Descriptive Names. Course Project Specification # 4 - 2 of 2
-15) Clips together Train Data files
-16) Appends Test and Train data sets. Course Project Specification # 1
-17) Inserts Descriptive Activity Data. Course Project Specification # 3
-18) Subsets data to just required Variables (means and stds). Course Project Specification # 2
-19) Create a second Tidy dataset of Means by activityName and subjectId. Course Project Specification # 5
-20) Exports the second Tidy dataset as a csv to be uploaded to Coursera
+* 1) Example code to set the Directory Location of the File Download and File Input for reading data.
+* 2) Example code to set the Directory Location of the exporting data Output.
+* 3) Example code for downloading the data from the URL.
+* 4) Note: Steps 1-3 are example only because they require local user directory information
+* 5) Note: Downloaded files were modified to convert Unix(Lf) to Dos(Cr/Lf)
+* 6) Read Activity_Label File
+* 7) Read Features File
+* 8) Read Test Files
+* 9) Read Train Files
+* 10) Rename activityData Columns to "activityId" and "activityName"
+* 11) Process featureData for use as XData Column Names. Modifies the original Feature names to better textual  descriptions.
+* 12) Renames Test Data Columns from V1, V2, etc. to Descriptive Names. Course Project Specification # 4 - 1 of 2 
+* 13) Clips together Test Data files
+* 14) Renames Train Data Columns from V1, V2, etc. to Descriptive Names. Course Project Specification # 4 - 2 of 2
+* 15) Clips together Train Data files
+* 16) Appends Test and Train data sets. Course Project Specification # 1
+* 17) Inserts Descriptive Activity Data. Course Project Specification # 3
+* 18) Subsets data to just required Variables (means and stds). Course Project Specification # 2
+* 19) Create a second Tidy dataset of Means by activityName and subjectId. Course Project Specification # 5
+* 20) Exports the second Tidy dataset as a csv to be uploaded to Coursera
 
 ## End R Program Code Summary
 ## ==========================
@@ -75,7 +76,7 @@ Note: Requirement 5 calls for the creation of a second Tidy dataset of means pro
 ==============
 R Code Listing
 ==============
-
+```
  # R Script to Read processed accelerometer and gyroscope data from Samsung Galaxy 5 smartphone
  # Data provided as input for Coursera "Getting and Cleaning Data" course
  #
@@ -250,6 +251,7 @@ write.table(subsetMeans, sep=",", row.names = FALSE, file=outputFile)
  # fileName <- subsetMeans.csv
  #data <- read.csv(paste(filePath, fileName, sep=""), header = TRUE)
  #View(data)
+```
 
 ## ==================
 ## End R Code Listing
