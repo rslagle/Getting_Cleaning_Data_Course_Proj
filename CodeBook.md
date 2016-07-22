@@ -7,10 +7,11 @@ Note: This dataset contains both Test data and Training Data from the Original D
 
 Note: All detailed original variable descriptions are at bottom of this CodeBook under "Documentation from Original Dataset"
 
-# ====================================================
-# File courseProjectTidyDataset.csv Dataset Dictionary
-# ====================================================
+## ====================================================
+## File courseProjectTidyDataset.csv Dataset Dictionary
+## ====================================================
 
+```
 activityName
 	Activity Name - Text filed describing the Activity during measurements
 	Unique Values are:
@@ -354,15 +355,16 @@ Time_Gravity_Accelerometer_std_Z
 	Average value of the orginal variable:	tGravityAcc-std()-Z
 	Averaged by Activity and Subject ID
 	Decimal number [-1,1]
+```
 
-# ===================
-# End Data Dictionary
-# ===================
+## ===================
+## End Data Dictionary
+## ===================
 
-# ==================================
-# Documentation from Original Dataset
-# Feature Selection 
-# =================
+## ==================================
+## Documentation from Original Dataset
+## Feature Selection 
+## =================
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -421,6 +423,6 @@ tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
 
-# ===========
-# End Orginal Dataset Documentation
-# =================================
+## =================================
+## End Orginal Dataset Documentation
+## =================================
